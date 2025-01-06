@@ -2,6 +2,9 @@
 !index.html
 !script.js
 !style.css
+!imgs
+!pages
 !imgs/*
+!pages/*
 !.gitignore
 !readme.md
