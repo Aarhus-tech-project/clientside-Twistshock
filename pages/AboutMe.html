@@ -3,25 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="h1">Beep</div>
-            <div class="col" style="background-color: lightblue; border: 2px solid darkgray;">
+            <div class="h1" style="margin-top: 1rem;">Beep</div>
+            <div class="col" id="aboutme1" style="background-color: lightblue; border: 2px solid darkgray;">
                 <div class="container mt-3 mb-3">
                     <h2>Card Header and Footer</h2>
                     <div class="card">
                       <div class="card-header">Header</div>
-                      <div class="card-body">Content</div> 
+                      <div class="card-body">
+                        <img src="path/to/your/image.jpg" alt="C'est moi" style="max-width: 100%; height: auto;">
+                      </div> 
                       <div class="card-footer">Footer</div>
                     </div>
                   </div>
             </div>
-            <div class="col" style="background-color: lightgreen; border: 2px solid darkgray;">
-                <h2>Additional Content</h2>
+            <div class="col" id="aboutme2" style="background-color: lightgreen; border: 2px solid darkgray;">
+                <h2>Bio</h2>
+                <ul>
+                    <!-- Age is calculated from the script, name is chosen from an array -->
+                    <li>Name: <span id="nameValue">ERROR: You may be accessing the page incorrectly</span></li>
+                    <li>Age: <span id="ageValue">ERROR: You may be accessing the page incorrectly</span></li>
+                </ul>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
