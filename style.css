@@ -1,3 +1,63 @@
 body {
     background-color: #f3ca93;
 }
+#aboutme1 {
+    background-color: #3ac1af;
+}
+#aboutme2 {
+    background-color: #bef393;
+}
+
+#aboutme1, #aboutme2 {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#hobbiestext, #hobbiesimgs {
+    background-color: #f3ca93;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-brand {
+    color: #090909;
+}
+/* It's silly, but i wanted to add a color effect to the menu*/
+.navbar .nav-link:hover {
+    background: repeating-linear-gradient(270deg, #ff0000, #ffffff);
+    background-size: 1400% 1400%;
+    animation: rainbow 5s ease infinite;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for fading effect */
+}
+
+@keyframes rainbow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+/* The text needs a margin due to the above effect. */
+.offcanvas-body .nav-link,
+.offcanvas-body .dropdown-item 
+{
+    margin-left: 10px;
+}
+.offcanvas-body .dropdown-item {
+    margin-left: 20px;
+}
+.col {
+    border: 2px solid darkgray;
+    margin-top: 1rem;
+}
+.custom-navbar {
+    background-color: #d9f4ff !important;
+}
+
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
