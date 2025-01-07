@@ -6,7 +6,48 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <form class="needs-validation">
+            <div class="mb-3">
+                <div class="h3" style="margin-top: 5rem;">Please fill out the form if you want to contact me</div>
+                <p>
+                    I will not be responding, since it's a test. <br>
+                    It will also not actually send a message.
+                </p>
+
+                <label for="contactEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="contactMessage" class="form-label">Your message</label>
+                <textarea class="form-control" id="contactMessage" placeholder="Your message" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter a message.
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col">
+                        <label for="contactCaptcha" class="form-label">What is 2 + 3?</label>
+                        <input type="text" class="form-control" id="contactCaptcha" placeholder="Your answer" required>
+                        <div class="invalid-feedback">
+                            Please answer the question.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="align-items-center" style="height: 100%;">
+                            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+
 <script src="script.js"></script>
 </body>
 </html>
