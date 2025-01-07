@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll("a[data-page]");
-    const content = document.getElementById("content");
+    const content = document.getElementById("content"); // Rather than loading separate pages, I want to load the content into a div so I don't have to reload the header on each page.
 
     links.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
             const page = this.getAttribute("data-page");
 
-            content.innerHTML = "<p>Loading</p>";
+            content.innerHTML = "<p>Loading</p>"; // Could do a spinner instead, but chances are it'll load too quickly to be seen.
             fetch(page)
                 .then(response => {
                     if (!response.ok) {
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
                             }
                         });
                     } else if (!page.includes("pages/Contact.html")){
-                        // to avoid multiple event listeners (does it even do that though?)
-                        const submitListener = document.getElementById("submitButton");
-                        if (submitListener) {
-                            submitListener.removeEventListener("click", function(event){});
+                        // The event listener should only exist on the contact page.
+                        const doesSubmitButtonExist = document.getElementById("submitButton");
+                        if (doesSubmitButtonExist) {
+                            doesSubmitButtonExist.removeEventListener("click", function(event){});
                         }
                     }
                 })
