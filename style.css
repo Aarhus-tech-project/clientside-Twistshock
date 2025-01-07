@@ -43,16 +43,12 @@ body {
 }
 /* The text needs a margin due to the above effect. */
 .offcanvas-body .nav-link,
-.offcanvas-body .dropdown-item 
+.offcanvas-body 
 {
     margin-left: 10px;
 }
-.offcanvas-body .dropdown-item {
+.offcanvas-body {
     margin-left: 20px;
-}
-.col {
-    border: 2px solid darkgray;
-    margin-top: 1rem;
 }
 .custom-navbar {
     background-color: #d9f4ff !important;
