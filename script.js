@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             const page = this.getAttribute("data-page");
 
-            content.innerHTML = "<p>Loading...</p>";
+            content.innerHTML = "<p>Loading</p>";
             fetch(page)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error("Network response was not ok");
+                        throw new Error("No response");
                     }
                     return response.text();
                 })
@@ -20,17 +20,33 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (page.includes("pages/AboutMe.html")) {
                         updateAboutMePage();
                     }
+                    if (page.includes("pages/Contact.html")) {
+                        // Event listener for the submit button to check validation.
+                        document.getElementById("submitButton").addEventListener("click", function(event) {
+                            const captcha = document.getElementById("contactCaptcha").value;
+                            if (captcha !== "5"){
+                                event.preventDefault();
+                                alert("Please solve the captcha to submit the form.");
+                            }
+                        });
+                    } else if (!page.includes("pages/Contact.html")){
+                        // to avoid multiple event listeners (does it even do that though?)
+                        const submitListener = document.getElementById("submitButton");
+                        if (submitListener) {
+                            submitListener.removeEventListener("click", function(event){});
+                        }
+                    }
                 })
                 .catch(error => {
                     console.error("Error loading page:", error);
-                    content.innerHTML = "<p>Failed to load content. Please try again later.</p>";
+                    content.innerHTML = "<p>Failed to load content.</p>";
                 });
         });
     });
 });
 
 function updateAboutMePage() {
-    // Dynamically populate the About Me page
+    // Chooses a name, and calculates age from birthday.
     const name = document.getElementById("nameValue");
     const age = document.getElementById("ageValue");
 
