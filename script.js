@@ -60,7 +60,7 @@ function updateAboutMePage() {
     if (!isBirthdayPassed) {
         ageValue--; // Adjust age if birthday has not yet occurred this year
     }
-    const nameArray = ["Daniel Carlsen", "Nunya Bizness", "Why do you ask?"];
+    const nameArray = ["Daniel", "Nunya Bizness", "Why do you ask?"];
     name.textContent = nameArray[Math.floor(Math.random() * nameArray.length)];
     age.textContent = ageValue;
 }
