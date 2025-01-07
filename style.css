@@ -11,16 +11,31 @@ body {
 #aboutme1, #aboutme2 {
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 #hobbiestext, #hobbiesimgs {
-    background-color: #f3ca93;
+    background-color: lightgrey;
+    border: 2px solid darkgrey;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+#experience {
+    border: 2px solid black;
+    height:100%;
+    background-color: lightgrey;
+    margin: 0 auto;
+    @media (min-width: 992px) {
+        width: 50%;
+        max-width: 50%;
+    };
+}
+#skillsbreakdown {
+    font-family: 'Times New Roman', Times, serif;
+}
+.list-group-item {
+    background-color: lightgrey;
+}
 .navbar .navbar-brand {
     color: #090909;
 }
@@ -28,12 +43,12 @@ body {
 .navbar .nav-link:hover {
     background: repeating-linear-gradient(270deg, #ff0000, #ffffff);
     background-size: 1400% 1400%;
-    animation: rainbow 5s ease infinite;
+    animation: redbow 5s ease infinite;
     border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for fading effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* drop-shadow on hovering */
 }
 
-@keyframes rainbow {
+@keyframes redbow {
     0%, 100% {
         background-position: 0% 50%;
     }
