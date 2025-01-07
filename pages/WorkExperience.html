@@ -6,6 +6,77 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container" id="experience" style="margin-top: 5rem;">
+        <h2 style="text-align:center">Past Experience</h2>
+        <hr style="border-top: 1px solid #000; margin: 20px 0;">
+        <ul class ="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="header" onclick="toggleBody('body1')">
+                    <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="text-align: left;">Aarhus Tech</span>
+                        <span style="text-align: center;">Intern</span>
+                        <span style="text-align: right;">2023-2023</span>
+                    </h3>
+                </div>
+                <div class="body" id="body1" style="display: none;">
+                    <p>Internship at student services</p>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="header" onclick="toggleBody('body2')">
+                    <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="text-align: left;">Aarhus University BSS</span>
+                        <span style="text-align: center;">Planner</span>
+                        <span style="text-align: right;">2021-2022</span>
+                    </h3>
+                </div>
+                <div class="body" id="body2" style="display: none;">
+                    <p>Monitored the mailbox for ad-hoc schedule change tasks, registered dispensations for student.</p>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="header" onclick="toggleBody('body3')">
+                    <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="text-align: left;">Eurofins</span>
+                        <span style="text-align: center;">Laboratory Assistant</span>
+                        <span style="text-align: right;">2018-2018</span>
+                    </h3>
+                </div>
+                <div class="body" id="body3" style="display: none;">
+                    <p>Internship as a laboratory assistant</p>
+                </div>
+            </li>
+        </ul>
+        <hr style="border-top: 1px solid #000; margin: 20px 0;">
+        <h2 style="text-align:center">Skills</h2>
+        <hr style="border-top: 1px solid #000; margin: 20px 0;">
+            <div class="skills-container" style="display: flex; justify-content: space-around;">
+                <div class="col" id="skillsbreakdown">
+                    <ul>
+                        <li>HTML &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                        <li>CSS &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                        <li>JavaScript &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                        <li>TypeScript &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                        <li>C# &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                        <li>Oracle SQL &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                    </ul>
+                </div>
+                <div class="col" id="skillsbreakdown"> <!--IDs *should* be unique, but since I'm using the same formatting...-->
+                    <ul>
+                        <li>Danish &#9679;&#9679;&#9679;&#9679;&#9679;</li>
+                        <li>English &#9679;&#9679;&#9679;&#9679;&#9679;</li>
+                        <li>Office Excel &#9679;&#9679;&#9679;&#9679;&#9675;</li>
+                    </ul>
+                </div>
+                <div class="col" id="skillsbreakdown"> <!--I could use another way of targeting them, like via the skills-container, and just hitting every col under it-->
+                    <ul>
+                        <li>Blender &#9679;&#9679;&#9675;&#9675;&#9675;</li>
+                        <li>Inkscape &#9679;&#9679;&#9679;&#9675;&#9675;</li>
+                        <li>Godot &#9679;&#9675;&#9675;&#9675;&#9675;</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <script src="../script.js"></script>
 </body>
 </html>

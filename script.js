@@ -64,3 +64,13 @@ function updateAboutMePage() {
     name.textContent = nameArray[Math.floor(Math.random() * nameArray.length)];
     age.textContent = ageValue;
 }
+
+// Function to toggle the text body of the experience
+function toggleBody(id) {
+    var body = document.getElementById(id);
+    if (body.style.display === "none") {
+        body.style.display = "block";
+    } else {
+        body.style.display = "none";
+    }
+}
