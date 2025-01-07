@@ -65,12 +65,8 @@ function updateAboutMePage() {
     age.textContent = ageValue;
 }
 
-// Function to toggle the text body of the experience
+// Function to toggle the text body of the experience page.
 function toggleBody(id) {
     var body = document.getElementById(id);
-    if (body.style.display === "none") {
-        body.style.display = "block";
-    } else {
-        body.style.display = "none";
-    }
+    body.style.display = body.style.display === "none" ? "block" : "none";
 }
