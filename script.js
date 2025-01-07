@@ -72,6 +72,18 @@ function toggleBody(id) {
 }
 
 function toggleInterest(id) {
+    const validIds = ["gamingCard", "bakingCard", "teaCard", "3dCard"];
+    if (!validIds.includes(id)) {
+        console.warn("Invalid ID:", id);
+        return;
+    }
     var body = document.getElementById(id);
-    body.style.display = body.style.display === "none" ? "block" : "none";
+    validIds.forEach(validId => {
+        const element = document.getElementById(validId);
+        if (validId === id) {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    });
 }
