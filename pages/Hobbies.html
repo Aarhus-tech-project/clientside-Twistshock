@@ -12,15 +12,15 @@
             <div class="col" id="hobbiestext">
                 <div class="container mt-3 mb-3">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action">Gaming</a>
-                        <a href="#" class="list-group-item list-group-item-action">Tea</a>
-                        <a href="#" class="list-group-item list-group-item-action">Baking</a>
-                        <a href="#" class="list-group-item list-group-item-action">3D</a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="toggleInterest('gamingCard')">Gaming</a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="toggleInterest('teaCard')">Tea</a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="toggleInterest('bakingCard')">Baking</a>
+                        <a href="#" class="list-group-item list-group-item-action" onclick="toggleInterest('3dCard')">3D</a>
                     </div>
                 </div>
             </div>
             <div class="col" id="hobbiesimgs">
-                <div class="card">
+                <div class="card" id="gamingCard">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <!--Single slide carousel, since I intend to use more, might as well use one here.-->
