@@ -70,3 +70,8 @@ function toggleBody(id) {
     var body = document.getElementById(id);
     body.style.display = body.style.display === "none" ? "block" : "none";
 }
+
+function toggleInterest(id) {
+    var body = document.getElementById(id);
+    body.style.display = body.style.display === "none" ? "block" : "none";
+}
